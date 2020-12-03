@@ -1,5 +1,5 @@
 FROM paperist/alpine-texlive-ja:latest
-RUN apk update && apk add --no-cache xz gnuplot node npm && \
+RUN apk update && apk add --no-cache xz gnuplot nodejs npm && \
       npm install -g textlint textlint-rule-preset-ja-spacing \
       textlint-rule-preset-ja-technical-writing \
       textlint-rule-spellcheck-tech-word \
