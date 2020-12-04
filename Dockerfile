@@ -5,7 +5,8 @@ RUN apk update && apk add --no-cache xz gnuplot nodejs npm && \
       textlint-rule-spellcheck-tech-word \
       textlint-plugin-latex \
       textlint-rule-preset-ja-engineering-paper \
-      textlint-rule-preset-jtf-style
+      textlint-rule-preset-jtf-style \
+      textlint-rule-prh
 WORKDIR /usr/local/texlive/2020/texmf-dist/tex/latex/gnuplot
 RUN gnuplot -e "set term tikz createstyle;quit" && mktexlsr
 RUN tlmgr update --self && tlmgr install siunitx
